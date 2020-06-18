@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Diabetes Predictor</title>
+         <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design.css') }}">
+    </head>
+
+    <body>
+        <!-- Website Title -->
+    	<div class="container" style="background-color:#002e48;" >
+           <img class="header" src="{{ url_for('static', filename='header.jpg') }}" alt="logo Image">
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+
+                <input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+                <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 70"><br>
+                <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+                <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+                <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 20.1"><br>
+                <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 34"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    <br>
+
+<div id="intro">
+  <h1>What is Diabetes?</h1>
+<p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food. </p>
+</div>    <br>
+<div class="row">
+  <div class="column" style="background-color:#E0FFFF;">
+    <h2>Type 1 diabetes</h2>
+    <p>Type 1 diabetes is an autoimmune disease. The immune system attacks and destroys cells in the pancreas, where insulin is made. It’s unclear what causes this attack. About 10 percent of people with diabetes have this type.People with type I diabetes are insulin-dependent, which means they must take artificial insulin daily to stay alive.</p>
+  </div>
+  <div class="column" style="background-color:#E0FFFF;">
+    <h2>Type 2 diabetes</h2>
+    <p>Type 2 diabetes affects the way the body uses insulin. While the body still makes insulin, unlike in type I, the cells in the body do not respond to it as effectively as they once did. This is the most common type of diabetes, according to the National Institute of Diabetes and Digestive and Kidney Diseases, and it has strong links with obesity.</p>
+  </div>
+  <div class="column" style="background-color:#E0FFFF;">
+    <h2>Gestational diabetes</h2>
+    <p>This type occurs in women during pregnancy when the body can become less sensitive to insulin. Gestational diabetes does not occur in all women and usually resolves after giving birth.</p>
+  </div>
+</div><br>
+<div id="intro1" style="background-color:#E0FFFF;">
+    <h2>Prediabetes</h2>
+    <p>Doctors refer to some people as having prediabetes or borderline diabetes when blood sugar is usually in the range of 100 to 125 milligrams per deciliter (mg/dL).The prediabetes level means that blood glucose is higher than usual but not so high as to constitute diabetes.</p>
+<p style="text-align: left">The risk factors for prediabetes and type 2 diabetes are similar. They include:
+- being overweight<br>
+- a family history of diabetes<br>
+- having a high-density lipoprotein (HDL) cholesterol level lower than 40 mg/dL or 50 mg/dL<br>
+- a history of high blood pressure<br>
+- having gestational diabetes or giving birth to a child with a birth weight of more than 9 pounds<br>
+- a history of polycystic ovary syndrome (PCOS)<br>
+- being more than 45 years of age<br>
+- having a sedentary lifestyle<br></p>
+  </div>
+</div>
+    <br>
+        <br>
+<div class="clearfix">
+  <div class="box" style="font-size: 14px; background-color:#0099CC	">
+  <h2>What is BMI?</h2>
+  <p>Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters. A high BMI can be an indicator of high body fatness. BMI can be used to screen for weight categories that may lead to health problems but it is not diagnostic of the body fatness or health of an individual.</p>
+  </div>
+  <div class="box" style="font-size: 14px; background-color:#0099CC">
+  <h2>How to calculate BMI?</h2>
+      <p>It is simple calculation using a person's height and weight.</p>
+      <p>The formula is BMI = kg/m2
+          where kg is a person's weight in kilograms and m2 is their height in metres squared.</p>
+      <p>A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9.</p>
+
+  </div>
+</div><br>
+        <br>
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+              <a target="_blank" href="https://github.com/roshniverma21"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/roshni-verma-a12303170"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <p class='footer-description'>Made with ❤️ by Roshni Verma.</p>
+           </div>
+
+       </div>
+
+    </body>
+</html>

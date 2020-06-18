@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Diabetes Predictor</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design.css') }}">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Prediction</span></h2>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1><span class='danger'>Oops! You have DIABETES.</span>
+                    <br><span> Follow the ways to lower your diabetes. Stay healthy !!</span></h1>
+
+			{% elif prediction==0 %}
+				<h1><span class='safe'>Great! You DON'T have diabetes.</span><br>
+					<span>Stay healthy !!</span></h1>
+			{% endif %}
+		</div>
+        <br>
+<div id="intro1" style="background-color:#E0FFFF;">
+<h2>Easy ways to control your blood sugar level :-</h2>
+<p style="text-align: center" >
+- Exercise Regularly. <br>
+- Control Your Carb Intake. <br>
+- Increase Your Fiber Intake. <br>
+- Drink Water and Stay Hydrated. <br>
+- Implement Portion Control. <br>
+- Choose Foods With a Low Glycemic Index. <br>
+- Control Stress Levels. <br>
+- Monitor Your Blood Sugar Levels.<br></p>
+  </div>
+<br>
+        <br>
+
+	 <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+              <a target="_blank" href="https://github.com/roshniverma21"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/roshni-verma-a12303170"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <p class='footer-description'>Made with ❤️ by Roshni Verma.</p>
+           </div>
+
+       </div>
+
+	</body>
+</html>
